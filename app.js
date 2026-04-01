@@ -1,12 +1,14 @@
 import express from "express";
-import studentRoutes from "./routes/students.js";
+import studentsRoute from "./routes/students.js";
+import authorsRoute from "./routes/authors.js";
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
 
-app.use("/api/students", studentRoutes);
+app.use("/api/students", studentsRoute);
+app.use("/api/authors", authorsRoute);
 
 app.get("/", (req, res) => {
   res
