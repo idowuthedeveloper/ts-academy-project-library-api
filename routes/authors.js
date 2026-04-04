@@ -1,25 +1,13 @@
 import express from "express";
+import authorController from "../controllers/authorController.js";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  return res
-    .status(200)
-    .json({ message: "All Authors -> AuthorController.allAuthors" });
-});
+router.get("/", authorController.allAuthors);
 
-router.get("/:id", (req, res) => {
-  const { id } = req.params;
-  return res.status(200).json({
-    message: `Find Authors -> AuthorController.singleAuthor with id: ${id}`,
-  });
-});
+router.get("/:id", authorController.oneAuthor);
 
-router.post("/", (req, res) => {
-  return res.status(201).json({
-    message: "Create Authors -> AuthorController.createAuthor",
-  });
-});
+router.post("/", authorController.createNewAuthor);
 
 router.put("/:id", (req, res) => {
   const { id } = req.params;
