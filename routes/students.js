@@ -1,24 +1,16 @@
 import express from "express";
+import studentController from "../controllers/studentController.js";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  return res
-    .status(200)
-    .json({ message: "All Students -> studentController.getAllStudents" });
-});
+router.get("/", studentController.allStudents);
 
-router.get("/:id", (req, res) => {
-  const { id } = req.params;
-  return res.status(200).json({
-    message: `Find Students -> studentController.findStudent with id: ${id}`,
-  });
-});
+router.get("/:id", studentController.oneStudent);
 
-router.post("/", (req, res) => {
-  return res.status(201).json({
-    message: "Create Students -> studentController.createNewStudents",
-  });
-});
+router.post("/", studentController.createNewStudent);
+
+router.put("/:id", studentController.updateStudent);
+
+router.delete("/:id", studentController.deleteStudent);
 
 export default router;
