@@ -1,6 +1,7 @@
 import express from "express";
 import studentsRoute from "./routes/students.js";
 import authorsRoute from "./routes/authors.js";
+import attendantsRoute from "./routes/attendants.js";
 import dbConnection from "./config/DB.js";
 
 const PORT = process.env.PORT || 3000;
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use("/api/students", studentsRoute);
 app.use("/api/authors", authorsRoute);
+app.use("/api/attendants", attendantsRoute);
 
 app.get("/", (req, res) => {
   res
