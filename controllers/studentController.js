@@ -1,7 +1,4 @@
 import Student from "../models/Student.js";
-import dbConnection from "../config/DB.js";
-
-dbConnection();
 
 const studentController = {
   options: {

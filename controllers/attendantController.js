@@ -1,7 +1,4 @@
 import Attendant from "../models/Attendant.js";
-import dbConnection from "../config/DB.js";
-
-dbConnection();
 
 const attendantController = {
   options: {

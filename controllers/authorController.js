@@ -1,7 +1,4 @@
 import Author from "../models/Author.js";
-import dbConnection from "../config/DB.js";
-
-dbConnection();
 
 const authorController = {
   options: {
