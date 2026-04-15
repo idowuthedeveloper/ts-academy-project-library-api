@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import dbConnection from "./config/DB.js";
 import studentsRoute from "./routes/students.js";
 import authorsRoute from "./routes/authors.js";
@@ -9,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // connect to the database
 dbConnection();
