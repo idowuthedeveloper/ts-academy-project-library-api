@@ -23,8 +23,8 @@ This API provides a backend service for managing a school library system. It all
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/school-library-management-api.git
-cd school-library-management-api
+git clone https://github.com/idowuthedeveloper/ts-academy-project-library-api.git
+cd ts-academy-project-library-api
 ```
 
 ### 2. Install Dependencies
